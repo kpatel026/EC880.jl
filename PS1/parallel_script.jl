@@ -1,5 +1,5 @@
 using Distributed
-addprocs(2)
+addprocs(8)
 @everywhere using Parameters, Plots, SharedArrays #import the libraries we want
 include("parallel_functions.jl") #import the functions that solve our growth model
 
@@ -11,7 +11,7 @@ include("parallel_functions.jl") #import the functions that solve our growth mod
 
 ##############Make plots
 #value function
-plot(k_grid, val_func, title="Value Function V(K)",ylabel = "value V(K)", label = "",xlabel = "capital K")
+plot(k_grid, val_func, title="Value Function V(K)",ylabel = "value V(K)", label = ["z = 1.25" "z = 0.2"],xlabel = "capital K")
 savefig("Value_Functions.png")
 
 #policy functions

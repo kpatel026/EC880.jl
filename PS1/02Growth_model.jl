@@ -66,7 +66,7 @@ function V_iterate(prim::Primitives, res::Results; tol::Float64 = 1e-4, err::Flo
 
     while err>tol #begin iteration
         v_next = Bellman(prim, res) #spit out new vectors
-        err = abs.(maximum(v_next.-res.val_func))/abs(v_next[prim.nk, 1]) #reset error level
+        err = maximum(abs.(v_next .- res.val_func)) #reset error level
         res.val_func = v_next #update value function
         n+=1
         println(n)
