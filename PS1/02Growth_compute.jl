@@ -12,16 +12,16 @@ prim, res = Initialize() #initialize primitive and results structs
 ##############Make plots
 #value function
 Plots.plot(k_grid, val_func, title="Value Function", label = ["z = 1.25" "z = 0.2"], linewidth = 2)
-Plots.savefig("02_Value_Functions.png")
+Plots.savefig("./PS1/02_Value_Functions.png")
 
 #policy functions
 Plots.plot(k_grid, pol_func, title="Policy Functions")
-Plots.savefig("02_Policy_Functions.png")
+Plots.savefig("./PS1/02_Policy_Functions.png")
 
 #changes in policy function
 pol_func_δ = copy(pol_func).-k_grid
 Plots.plot(k_grid, pol_func_δ, title="Policy Functions Changes")
-Plots.savefig("02_Policy_Functions_Changes.png")
+Plots.savefig("./PS1/02_Policy_Functions_Changes.png")
 
 println("All done!")
 ################################

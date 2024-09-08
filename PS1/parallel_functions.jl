@@ -38,7 +38,7 @@ end
     
     v_next = SharedArray{Float64}(nk,nz)
 
-    @sync @distributed for (k_index, z_index) in collect(Iterators.product(1:nk,1:nz))
+    @sync @distributed for (k_index, z_index) in Iterators.product(1:nk,1:nz)
 
         k = k_grid[k_index]
         z = z_grid[z_index]
@@ -69,7 +69,7 @@ function V_iterate(prim::Primitives, res::Results; tol::Float64 = 1e-6, err::Flo
         err = maximum(abs.(v_next .- res.val_func))
         res.val_func .= v_next
         n += 1
-        println(n)
+        println
     end
     println("Value function converged in ", n, " iterations.")
 end
