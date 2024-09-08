@@ -1,6 +1,6 @@
 using Distributed
 addprocs(8)
-@everywhere using Parameters, Plots, SharedArrays #import the libraries we want
+@everywhere using Parameters, Plots, SharedArrays, LaTeXStrings #import the libraries we want
 include("parallel_functions.jl") #import the functions that solve our growth model
 
 
@@ -15,7 +15,7 @@ plot(k_grid, val_func, title="Value Function V(K)",ylabel = "value V(K)", label 
 savefig("./PS1/Value_Functions.png")
 
 #policy functions
-plot(k_grid, pol_func, title="Policy Function K'(K)",ylabel = "policy K'(K)", label = "policy K'(K)",xlabel = "capital K",color="blue",linestyle=:solid)
+plot(k_grid, pol_func, title="Policy Function K'(K)",ylabel = "policy K'(K)", label = [L"K'(K, Z_h)" L"K'(Z_l)"],xlabel = "capital K",color="blue",linestyle=:solid)
 plot!(k_grid,k_grid,label = "45 degree",color="red",linestyle=:dash)
 savefig("./PS1/Policy_Functions.png")
 

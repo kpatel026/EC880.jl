@@ -38,7 +38,7 @@ end
     
     v_next = SharedArray{Float64}(nk,nz)
 
-    @sync @distributed for (k_index, z_index) in Iterators.product(1:nk,1:nz)
+    @sync @distributed for (k_index, z_index) in collect(Iterators.product(1:nk,1:nz))
 
         k = k_grid[k_index]
         z = z_grid[z_index]
