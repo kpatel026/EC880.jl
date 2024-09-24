@@ -1,0 +1,67 @@
+\documentclass[10pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb, graphicx, multicol, array}
+\usepackage{parskip}
+\usepackage{booktabs}
+
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+
+\begin{document}
+ 
+\title{Problem Set 3}
+\author{Nicolas Moreno, Kushal Patel, Olivia Wilkinson \\
+ECON: 880}
+\maketitle
+
+\section{Problem 2}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{@{}llll@{}}
+    \toprule
+    \textbf{Variable}             & \textbf{Standard} & \textbf{TV1 Shock $\alpha = 1$} & \textbf{TV1 Shock $\alpha = 2$} \\ \midrule
+    Price level                   & 0.734             & 0.691                           & 0.719                           \\
+    Mass of Incumbents            & 6.699             & 6.733                           & 6.038                           \\
+    Mass of Entrants              & 2.655             & 4.222                           & 3.511                           \\
+    Mass of Exits                 & 1.672             & 2.812                           & 2.310                           \\
+    Aggregate Labor               & 180.127           & 188.812                         & 182.574                         \\
+    Labor of Incumbents           & 142.859           & 134.777                         & 133.252                         \\
+    Labor of Entrants             & 37.268            & 49.369                          & 45.970                          \\
+    Fraction of Labor in Entrants & 0.207             & 0.261                           & 0.252                           \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+Without random disturbances in action values, only firms with the lowest productivity exit. With the EV shocks with variance parameter $\alpha = 1$, 
+the value of staying is higher for low incumbent firms but decreases for medium productivity firms. We see that firms with the lowest productivity exit with a 
+lower probability compared to the baseline model while firms with medium productivity exit with a higher probability. 
+
+The price is lower with EV shocks since the value of exiting is lower for medium productivity firm.  Since less low productivity firms exit less frequently, or equivalently low productivity firm enter more frequently, the mass of entrants increases. The law of motion for the mass of 
+incumbents is increasing in $M$, so the mass of incuments increases with EV shocks. 
+
+The lower equilibrium price lowers labor demand on the intensive margin, but the higher mass of firms increases aggregate labor on the extensive margin. 
+Since there are more entrants relative to incumbents with EV shocks, the fraction of labor by entrants increases. 
+
+When we set $\alpha = 2$, the variance of the EV shock decreases, so we see higher probabilities for the actions implied by the standard model (the modal action). We see that the results for 
+$\alpha = 2$ are in between the results of the standard model and the results with $\alpha = 1$. 
+
+
+    \section{Problem 3}
+
+    \begin{figure}[!h]
+        \centering
+        \includegraphics*[width = 0.75\textwidth]{exit_rule_c_f_10.png}
+    \end{figure}
+
+\newpage 
+    \section{Problem 4}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics*[width = 0.75\textwidth]{exit_rule_c_f_15.png}
+    \end{figure}
+
+The probability of exit increases for the model specification with EV shocks. In the standard model, firms with the second lowest productivity also exit. The firing cost decreases the immediate flow profits and the continuation value 
+by affecting all future profits. A higher productivity is needed to induce the firm to stay. 
+\end{document}
