@@ -108,7 +108,7 @@ ev1_x_pr_cf_h = res.x_pr
 
 prim, res = Initialize() 
 res.c_f = 15.0
-res.α = 1.5
+res.α = 2.0
 solve_model_ev(prim, res)
 ev2_x_pr = res.x_pr
 
